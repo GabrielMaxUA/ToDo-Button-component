@@ -82,6 +82,7 @@ class NewTaskNib: UIView {
     let id = UUID().uuidString
     guard let caption = captionTextView.text, caption.count >= 4 , captionTextView.textColor != .placeholderText else {
       shakeAnimation()
+      
       delegate?.errorAlert(title: "Caption Error", message: "Please provide caption longer than 4 caracters")
       return }
     let categoryIndex = picker.selectedRow(inComponent: 0)
@@ -105,6 +106,17 @@ class NewTaskNib: UIView {
       animation.timingFunction = CAMediaTimingFunction(name: .linear)
       animation.duration = 0.5
       animation.values = [-10, 10, -8, 8, -5, 5, 0] //moving left right with decreasing the distabce and positioning back to origial state 0
+        
+    let originalColor = submitButton.backgroundColor
+
+        // Flash red, then go back
+        UIView.animate(withDuration: 0, animations: {
+            self.submitButton.backgroundColor = .systemRed
+        }) { _ in
+            UIView.animate(withDuration: 1.5) {
+                self.submitButton.backgroundColor = originalColor
+            }
+        }
       submitButton.layer.add(animation, forKey: "shake")
   }
 
