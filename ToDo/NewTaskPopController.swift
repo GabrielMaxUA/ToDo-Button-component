@@ -9,6 +9,7 @@ import UIKit
 
 protocol NewTaskDelegate: AnyObject {
   func closeModal()
+  func errorAlert(title: String, message: String)
 }
 
 class NewTaskPopController: UIViewController {
@@ -76,6 +77,13 @@ class NewTaskPopController: UIViewController {
 //}
 
 extension NewTaskPopController: NewTaskDelegate {
+  func errorAlert(title: String, message: String) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "OK", style: .default) //closing on ok tap
+    alert.addAction(okAction)
+    present(alert, animated: true)
+  }
+  
   func closeModal() {
     dismiss(animated: true)
   }

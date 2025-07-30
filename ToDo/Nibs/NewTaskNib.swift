@@ -80,7 +80,10 @@ class NewTaskNib: UIView {
   
   @IBAction func SubmitTapped(_ sender: Any) {
     let id = UUID().uuidString
-    guard let caption = captionTextView.text, caption.count >= 4 , captionTextView.textColor != .placeholderText else { return }
+    guard let caption = captionTextView.text, caption.count >= 4 , captionTextView.textColor != .placeholderText else {
+      shakeAnimation()
+      delegate?.errorAlert(title: "Caption Error", message: "Please provide caption longer than 4 caracters")
+      return }
     let categoryIndex = picker.selectedRow(inComponent: 0)
     let category = Category.allCases[categoryIndex]
     
@@ -96,6 +99,16 @@ class NewTaskNib: UIView {
     }
     delegate?.closeModal()
   }
+  
+  func shakeAnimation() {
+      let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+      animation.timingFunction = CAMediaTimingFunction(name: .linear)
+      animation.duration = 0.5
+      animation.values = [-10, 10, -8, 8, -5, 5, 0] //moving left right with decreasing the distabce and positioning back to origial state 0
+      submitButton.layer.add(animation, forKey: "shake")
+  }
+
+  
 }
 
 // MARK: - extensions
