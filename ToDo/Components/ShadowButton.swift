@@ -27,7 +27,7 @@ class ShadowButton: UIButton {
     layer.cornerRadius = 5
     layer.masksToBounds = false //to ensure the shadow will be present
     layer.shadowOpacity = 0.8
-    layer.shadowRadius = 4 //for blur add to some number
+    layer.shadowRadius = 5 //for blur add to some number
     layer.shadowColor = UIColor.other.cgColor //set colour in extension assets or manually
     
   }
