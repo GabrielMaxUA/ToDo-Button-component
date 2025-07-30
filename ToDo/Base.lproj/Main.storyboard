@@ -256,6 +256,7 @@
                     </view>
                     <connections>
                         <outlet property="appTheme" destination="QsO-Zi-Zvh" id="GYm-eE-EAl"/>
+                        <outlet property="segmentedControl" destination="Br1-vE-YeC" id="Oam-SU-eZw"/>
                         <outlet property="settingsModal" destination="cxY-Zr-xf2" id="Sug-bi-y9k"/>
                         <outlet property="settingsView" destination="MXF-DW-HWS" id="3Py-3K-IGk"/>
                         <outlet property="themeHeadLabel" destination="YLi-l0-Lda" id="e7H-bT-31W"/>
