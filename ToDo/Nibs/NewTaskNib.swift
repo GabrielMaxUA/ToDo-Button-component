@@ -80,7 +80,7 @@ class NewTaskNib: UIView {
   
   @IBAction func SubmitTapped(_ sender: Any) {
     let id = UUID().uuidString
-    guard caption.count >= 4 else { return }
+    guard let caption = captionTextView.text, caption.count >= 4 , captionTextView.textColor != .placeholderText else { return }
     let categoryIndex = picker.selectedRow(inComponent: 0)
     let category = Category.allCases[categoryIndex]
     
