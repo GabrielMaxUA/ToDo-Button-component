@@ -27,7 +27,7 @@ class NewTaskPopController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      view.backgroundColor = .black.withAlphaComponent(0.9)
+      view.backgroundColor = .black.withAlphaComponent(0.5)
       nib.transform = CGAffineTransform(scaleX: 0, y: 0)
       view.addSubview(nib)
         // Do any additional setup after loading the view.
