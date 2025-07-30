@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewTaskNib" customModule="ToDo" customModuleProvider="target">
+            <connections>
+                <outlet property="captionTextView" destination="Cfc-fL-uUi" id="npH-56-zlc"/>
+                <outlet property="nibBox" destination="iN0-l3-epB" id="lea-mf-7uv"/>
+                <outlet property="nibTitle" destination="Y14-cd-4Jv" id="KBx-e2-3KZ"/>
+                <outlet property="picker" destination="btJ-hs-XgW" id="3eE-ck-RNV"/>
+                <outlet property="submitButton" destination="2Qt-F7-Cqg" id="9jh-3a-9Fu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="506"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y14-cd-4Jv">
+                    <rect key="frame" x="15" y="15" width="139" height="27"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twc-a6-tKQ">
+                    <rect key="frame" x="147.33333333333334" y="67" width="80.333333333333343" height="23"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describtion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylc-s0-CNM">
+                    <rect key="frame" x="137.66666666666666" y="240" width="100" height="23"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btJ-hs-XgW">
+                    <rect key="frame" x="27.666666666666657" y="105" width="320" height="105"/>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="105" id="CuT-X1-2TL"/>
+                    </constraints>
+                </pickerView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="enter the text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cfc-fL-uUi">
+                    <rect key="frame" x="15" y="278" width="345" height="105"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="105" id="Jvw-O3-fjI"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fb-Pd-0lZ">
+                    <rect key="frame" x="313" y="11" width="47" height="35"/>
+                    <color key="tintColor" systemColor="tertiaryLabelColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" title="">
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="background">
+                            <color key="value" systemColor="systemTealColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadow">
+                            <color key="value" name="health"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="closeModal:" destination="-1" eventType="touchUpInside" id="EFl-MB-X5u"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qt-F7-Cqg" customClass="ShadowButton" customModule="ToDo" customModuleProvider="target">
+                    <rect key="frame" x="140.66666666666666" y="413" width="94" height="35"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Add Task"/>
+                    <connections>
+                        <action selector="SubmitTapped:" destination="-1" eventType="touchUpInside" id="ptm-ZG-dq1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Y14-cd-4Jv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="9Lc-2V-1yf"/>
+                <constraint firstItem="6Fb-Pd-0lZ" firstAttribute="centerY" secondItem="Y14-cd-4Jv" secondAttribute="centerY" id="Ag0-4c-S5s"/>
+                <constraint firstItem="Ylc-s0-CNM" firstAttribute="top" secondItem="btJ-hs-XgW" secondAttribute="bottom" constant="30" id="BBk-lz-5GN"/>
+                <constraint firstItem="twc-a6-tKQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="D9Q-At-f8O"/>
+                <constraint firstAttribute="trailing" secondItem="6Fb-Pd-0lZ" secondAttribute="trailing" constant="15" id="Ilk-N5-1EE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Cfc-fL-uUi" secondAttribute="trailing" constant="15" id="LQQ-8W-34F"/>
+                <constraint firstItem="Ylc-s0-CNM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OD0-58-BPv"/>
+                <constraint firstItem="Cfc-fL-uUi" firstAttribute="top" secondItem="Ylc-s0-CNM" secondAttribute="bottom" constant="15" id="PZO-pu-4UG"/>
+                <constraint firstItem="Y14-cd-4Jv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="SqH-Km-2oO"/>
+                <constraint firstItem="btJ-hs-XgW" firstAttribute="top" secondItem="twc-a6-tKQ" secondAttribute="bottom" constant="15" id="TqD-6o-XkV"/>
+                <constraint firstItem="2Qt-F7-Cqg" firstAttribute="top" secondItem="Cfc-fL-uUi" secondAttribute="bottom" constant="30" id="ZkC-BT-PJG"/>
+                <constraint firstItem="twc-a6-tKQ" firstAttribute="top" secondItem="Y14-cd-4Jv" secondAttribute="bottom" constant="25" id="aZh-eh-lMD"/>
+                <constraint firstItem="btJ-hs-XgW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="b2W-fj-YhF"/>
+                <constraint firstItem="Cfc-fL-uUi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="dxf-aJ-xfn"/>
+                <constraint firstItem="2Qt-F7-Cqg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yLv-zs-ARg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-482" y="-240"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="health">
+            <color red="1" green="0.0" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
