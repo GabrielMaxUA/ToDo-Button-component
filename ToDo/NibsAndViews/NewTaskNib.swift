@@ -79,6 +79,7 @@ class NewTaskNib: UIView {
   }
   
   @IBAction func SubmitTapped(_ sender: Any) {
+    print("LOG_INFO: creating task started. submit button tapped") //allows us to filter things in console using LOG_INFO
     let id = UUID().uuidString
     
     guard let caption = captionTextView.text, caption.count >= 4 , captionTextView.textColor != .placeholderText else {
@@ -86,6 +87,8 @@ class NewTaskNib: UIView {
       
       delegate?.errorAlert(title: "Caption Error", message: "Please provide caption longer than 4 caracters")
       return }
+    
+    print("LOG_INFO: Validation of the task is successfully passed")
     
     let categoryIndex = picker.selectedRow(inComponent: 0)
     let category = Category.allCases[categoryIndex]
@@ -98,6 +101,7 @@ class NewTaskNib: UIView {
     else{
       let newTask = Task(id: id, category: category, caption: caption, date: Date(), isCompleted: false)
       let userInfo: [String: Task] = ["NewTask": newTask]
+      print("LOG_INFO: new task created and posted to notification center ")
       NotificationCenter.default.post(name: NSNotification.Name("NewTask"), object: nil, userInfo: userInfo)
     }
     delegate?.closeModal()

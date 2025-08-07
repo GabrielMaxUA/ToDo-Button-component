@@ -81,9 +81,11 @@ class HomeScreen: UIViewController {
       
    */
   @objc func addNewTask(_ notification: Notification) {
+    print("LOG_INFO: New task recieved by notification observer")
     if let userInfo = notification.userInfo, let task = userInfo["NewTask"] as? Task {
       tasks.append(task)
       taskTable.reloadData()
+      print("LOG_INFO: New task added to the array")
     }
   }
   
