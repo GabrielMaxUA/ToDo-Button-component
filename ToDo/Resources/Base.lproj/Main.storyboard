@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeScreen" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,10 +173,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="appDate" destination="L3Q-5D-8ot" id="4L9-Jj-Mdi"/>
-                        <outlet property="appName" destination="32o-Gj-d59" id="SCC-A6-oO7"/>
-                        <outlet property="appTitle" destination="ImH-Tb-MSI" id="JJN-8f-eE6"/>
-                        <outlet property="taskTable" destination="SG6-jm-C6J" id="9PH-oT-2bZ"/>
+                        <outlet property="appDate" destination="L3Q-5D-8ot" id="kXB-tX-peL"/>
+                        <outlet property="appName" destination="32o-Gj-d59" id="EKS-7J-5aD"/>
+                        <outlet property="appTitle" destination="ImH-Tb-MSI" id="iQ1-Qk-T00"/>
+                        <outlet property="taskTable" destination="SG6-jm-C6J" id="xhJ-Sb-37B"/>
                         <segue destination="2Dy-s5-Lkw" kind="presentation" identifier="settings" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="ru6-C5-Txr"/>
                     </connections>
                 </viewController>

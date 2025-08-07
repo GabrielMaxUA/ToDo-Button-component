@@ -80,11 +80,13 @@ class NewTaskNib: UIView {
   
   @IBAction func SubmitTapped(_ sender: Any) {
     let id = UUID().uuidString
+    
     guard let caption = captionTextView.text, caption.count >= 4 , captionTextView.textColor != .placeholderText else {
       shakeAnimation()
       
       delegate?.errorAlert(title: "Caption Error", message: "Please provide caption longer than 4 caracters")
       return }
+    
     let categoryIndex = picker.selectedRow(inComponent: 0)
     let category = Category.allCases[categoryIndex]
     
