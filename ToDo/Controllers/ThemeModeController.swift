@@ -19,7 +19,7 @@ class ThemeModeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupview()
-
+      
     }
 
   private func setupview() {
@@ -37,7 +37,7 @@ class ThemeModeController: UIViewController {
           segmentedControl.selectedSegmentIndex = 1
         case .unspecified:
           segmentedControl.selectedSegmentIndex = 2
-        @unknown default: //for cases which are there but we dont know about those like cusmot user themes on the phone loaded from net
+        @unknown default: //for cases which are there but we dont know about those like custom user themes on the phone loaded from net
           segmentedControl.selectedSegmentIndex = 2
       }
     }
@@ -71,14 +71,18 @@ class ThemeModeController: UIViewController {
     let window = UIApplication.shared.connectedScenes.flatMap {($0 as? UIWindowScene)?.windows ?? [] }.first {$0.isKeyWindow} //looking for scenes in the app with flatMap (returns array) while compactMap(returns array of array)
     if sender.selectedSegmentIndex == 0 {
       window?.overrideUserInterfaceStyle = .light //UIUserInterfaceStyle.light
+      UserDefaults.standard.set(0, forKey: "themeMode")
     }
     else if sender.selectedSegmentIndex == 1 {
       window?.overrideUserInterfaceStyle = .dark
+      UserDefaults.standard.set(1, forKey: "themeMode")
     }
     else {
       window?.overrideUserInterfaceStyle = .unspecified
+      UserDefaults.standard.set(2, forKey: "themeMode")
     }
   }
+  ///UserDefaults then passed and extracted to sceneDelegate with Int properties
 
 }
 
