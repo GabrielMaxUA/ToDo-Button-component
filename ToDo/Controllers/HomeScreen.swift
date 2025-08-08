@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import os
 ///Our main controller when the app is launched. Starting point where all controllers and views are connected to
 class HomeScreen: UIViewController {
 
@@ -81,10 +81,12 @@ class HomeScreen: UIViewController {
       
    */
   @objc func addNewTask(_ notification: Notification) {
+    os_log("New task notification recieved", type: .info)
     print("LOG_INFO: New task recieved by notification observer")
     if let userInfo = notification.userInfo, let task = userInfo["NewTask"] as? Task {
       tasks.append(task)
       taskTable.reloadData()
+      os_log("New task added to the array", type: .info)
       print("LOG_INFO: New task added to the array")
     }
   }

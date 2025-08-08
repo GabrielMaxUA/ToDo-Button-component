@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import os //for Logging
 //protocol NewTaskNibDelegate: AnyObject {
 //  func closeModal()
 //}
@@ -79,6 +79,7 @@ class NewTaskNib: UIView {
   }
   
   @IBAction func SubmitTapped(_ sender: Any) {
+    os_log("creating task started. submit button tapped", type: .info)
     print("LOG_INFO: creating task started. submit button tapped") //allows us to filter things in console using LOG_INFO
     let id = UUID().uuidString
     
@@ -87,7 +88,7 @@ class NewTaskNib: UIView {
       
       delegate?.errorAlert(title: "Caption Error", message: "Please provide caption longer than 4 caracters")
       return }
-    
+    os_log("Validation of the task is successfully passed", type: .info)
     print("LOG_INFO: Validation of the task is successfully passed")
     
     let categoryIndex = picker.selectedRow(inComponent: 0)
@@ -101,6 +102,7 @@ class NewTaskNib: UIView {
     else{
       let newTask = Task(id: id, category: category, caption: caption, date: Date(), isCompleted: false)
       let userInfo: [String: Task] = ["NewTask": newTask]
+      os_log("new task created and posted to notification center", type: .info)
       print("LOG_INFO: new task created and posted to notification center ")
       NotificationCenter.default.post(name: NSNotification.Name("NewTask"), object: nil, userInfo: userInfo)
     }
