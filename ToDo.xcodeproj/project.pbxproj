@@ -10,22 +10,9 @@
 		38D3D4992E29D4E1000EEC8B /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3881C23D2E442137005FBE2F /* Exceptions for "ToDo" folder in "ToDo" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Resources/Info.plist,
-			);
-			target = 38D3D4982E29D4E1000EEC8B /* ToDo */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		38D3D49B2E29D4E1000EEC8B /* ToDo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				3881C23D2E442137005FBE2F /* Exceptions for "ToDo" folder in "ToDo" target */,
-			);
 			path = ToDo;
 			sourceTree = "<group>";
 		};
