@@ -10,22 +10,9 @@
 		38D3D4992E29D4E1000EEC8B /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		38D3D4AB2E29D4E2000EEC8B /* Exceptions for "ToDo" folder in "ToDo" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 38D3D4982E29D4E1000EEC8B /* ToDo */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		38D3D49B2E29D4E1000EEC8B /* ToDo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				38D3D4AB2E29D4E2000EEC8B /* Exceptions for "ToDo" folder in "ToDo" target */,
-			);
 			path = ToDo;
 			sourceTree = "<group>";
 		};
@@ -147,7 +134,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7XZJ4BCPR6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDo/Info.plist;
+				INFOPLIST_FILE = ToDo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -175,7 +162,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7XZJ4BCPR6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDo/Info.plist;
+				INFOPLIST_FILE = ToDo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
